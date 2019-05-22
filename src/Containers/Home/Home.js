@@ -1,5 +1,39 @@
-import React from 'react';
+import React, { Component } from 'react';
 
-const home = () => <p>Home</p>
+import CardDeck from '../../Components/Cards/CardDeck'
+import Card from '../../Components/Cards/Card'
+import data from '../../data'
 
-export default home;
+class Home extends Component {
+
+    state = {
+        data: null,
+    }
+
+    componentDidMount() {
+        this.setState({
+            data: data,
+        })
+    }
+
+    render() {
+        let dataVariable = null
+
+        if (this.state.data) {
+            dataVariable = data.map((item) => {
+                return <Card key={item.id}
+                    cost={item.cost} title={item.title}
+                    description={item.description}
+                    link={item.link} />
+            })
+        }
+
+        return (
+            <CardDeck>
+                {dataVariable}
+            </CardDeck>
+        )
+    }
+}
+
+export default Home;
