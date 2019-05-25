@@ -35,7 +35,6 @@ const card = (props) => {
                 }}>Rupees : {props.cost}</CardTitle>
 
                 <CardSubtitle style={{ color: "dodgerblue" }}>Title : {props.title}</CardSubtitle>
-                <CardText>DEscription : {props.description}}</CardText>
                 <Button>Add2Cart</Button>
             </CardBody>
         </Card>

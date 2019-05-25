@@ -23,7 +23,6 @@ class Home extends Component {
             dataVariable = data.map((item) => {
                 return <Card key={item.id}
                     cost={item.cost} title={item.title}
-                    description={item.description}
                     link={item.link} />
             })
         }
