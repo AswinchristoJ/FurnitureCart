@@ -6,16 +6,16 @@ import {
 
 const card = (props) => {
     return (
-
-        <Card body outline color="danger"
+        <div>
+        <Card body 
             style={{
                 fontSize:"13px",
-                height: "300px",
+                height: "350px",
                 width: "200px",
                 flex: "0 1 auto",
-                overflow: "auto",
-                margin: "2px",
-                padding: "0px"
+                overflow: "",
+                margin: "5px",
+                padding: "10px"
             }}>
             <CardImg
                 style={{
@@ -34,11 +34,20 @@ const card = (props) => {
                     fontWeight: "500"
                 }}>Rupees : {props.cost}</CardTitle>
 
-                <CardSubtitle style={{ color: "dodgerblue" }}>Title : {props.title}</CardSubtitle>
-                <Button>Add2Cart</Button>
+                <CardSubtitle style={{ color: "dodgerblue",
+                                        height:"40px",
+                                        overflow:"hidden"
+             }}>Title : {props.title}</CardSubtitle>
+             <div style={{
+                 display:"flex",
+                 justifyContent:"center"
+             }}>
+             <Button color="primary" className="container" size="sm">Add2Cart</Button>
+             </div>
+                
             </CardBody>
         </Card>
-
+             </div>
     );
 };
 
